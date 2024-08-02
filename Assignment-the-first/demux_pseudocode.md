@@ -26,25 +26,20 @@ argparse! variables: r1 for R1.fq file, r2 for R2.fq file, r3 for R3.fq file, an
 change list of valid indicies text file to an actual list...valid_BC_list?
 
 # function to generate the reverse compliment of R3
-    def rev_comp(file):
-        with open (file, "r") as fh:
-        for i,sequence_line in enumerate(file):
-                i % 4 == 3 (looking at sequecning line)
-                    index = -1 #start at last base
-                    generate the reverse compliment (save as variable "BC_2")
-                        if index == "A":
-                            index == "T"
-                        if index == "C":
-                            index == "G"
-                        if index == "G";
-                            index == "C"
-                        if index == "T":
-                            index == "A"
-                        RC_R3 += index (append or concatinate reverse base to "R3_RC")
-                    index += -1 (move over one base to the left)
-            return BC_2?
-                
-    file = r3
+    def rev_comp(seq:str)-->str:
+    '''Use me if you want to take a DNA sequence(string) and generate a reverse complement (string). Remember to import bioinfo.py'''
+        complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'} 
+        seq = seq.strip()
+        rev_seq = seq[::-1]
+        valid_seq = validate_base_seq(seq)
+        if valid_seq = len(seq)
+            rev_comp = [complement[base] for base in rev_seq]
+        return(rev_comp)
+
+Input: ACTGTCGA
+Output: TCGACAGT
+
+
 
 
 # function to append index 1 and RC_index 2 to header to R1.fq and R4.fq    
