@@ -27,7 +27,7 @@ change list of valid indicies text file to an actual list...valid_BC_list?
 
 # function to generate the reverse compliment of R3
     def rev_comp(seq:str)-->str:
-    '''Use me if you want to take a DNA sequence(string) and generate a reverse complement (string). Remember to import bioinfo.py'''
+    '''A function that takes a DNA sequence(string) and generate a reverse complement (string). Remember to import bioinfo.py'''
         complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'} 
         seq = seq.strip()
         rev_seq = seq[::-1]
@@ -35,8 +35,17 @@ change list of valid indicies text file to an actual list...valid_BC_list?
         if valid_seq = len(seq)
             rev_comp = [complement[base] for base in rev_seq]
         return(rev_comp)
+    
+    def verify_rev_comp (seq, rev_comp):
+    '''Use me to confirm that the reverse compliment was generated'''
+    return seq.strip() == rev_comp.strip()
 
-Input: ACTGTCGA
+    verify_rev_comp("ACT", "AGT") == True
+    verify_rec_comp("TGC", "ACG") == False
+
+
+
+nput: ACTGTCGA
 Output: TCGACAGT
 
 
@@ -47,7 +56,8 @@ Output: TCGACAGT
         enumerate to sequence line of r2 and save as variable "BC_1"
         to header line of file (1 % 4 == 0?):
             append or concatinate "BC_1" and "BC_2" (tab separated?)
-        save as few fastq file
+        save as new fastq file
+    return new fastq file
 
 # Unknown, Unmatched, Matched?
     with open R2:
