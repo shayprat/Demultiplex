@@ -34,10 +34,10 @@ We have a sequencing output of 1+ billion reads --> need to bucket them by sampl
 2. Describe output
 52 FastQ files. 48 are for dual mapped reads (24 forward biological --> index_R1.fastq ; 24 reverse biological --> index_R2.fastq); 2 files for barcodes containing N's or ones that't don't meet qual score cuttoff (unknown_read1.fastq and unknown_read2.fastq); 2 files for bacodes that hopped (hopped_read1.fastq and hopped_read2.fastq)
 3. Upload your [4 input FASTQ files](../TEST-input_FASTQ) and your [>=6 expected output FASTQ files](../TEST-output_FASTQ).
-4. [Pseudocode](../demux_pseudocode.md)
+4. [Pseudocode](demux_pseudocode.md)
 5. High level functions. For each function, be sure to include:
     1. Description/doc string
     2. Function headers (name and parameters)
     3. Test examples for individual functions
     4. Return statement
-    See [Pseudocode](../demux_pseudocode.md)
+    See [Pseudocode](demux_pseudocode.md)
