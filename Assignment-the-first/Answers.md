@@ -14,10 +14,10 @@
 
 2. Per-base NT distribution
     1. Use markdown to insert your 4 histograms here.
-    ![alt text](../plots/R1_mean_qscore_distribution.png)
-    ![alt text](../plots/R2_mean_qscore_distribution.png)
-    ![alt text](../plots/R3_mean_qscore_distribution.png)
-    ![alt text](../plots/R4_mean_qscore_distribution.png)
+    ![alt text](../R1_mean_qscore_distribution.png)
+    ![alt text](../R2_mean_qscore_distribution.png)
+    ![alt text](../R3_mean_qscore_distribution.png)
+    ![alt text](../R4_mean_qscore_distribution.png)
     2. **YOUR ANSWER HERE**
     3. Number of indeces with N's
         R2 - 3976613
