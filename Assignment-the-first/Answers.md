@@ -2,18 +2,29 @@
 
 ## Part 1
 1. Be sure to upload your Python script. Provide a link to it here:
+[generate mean qual score per base tsv](../avg_qscore_tsv.py)
+[plot mean qual score distribution](../plt_qscore_distribution.py)
 
 | File name | label | Read length | Phred encoding |
 |---|---|---|---|
-| 1294_S1_L008_R1_001.fastq.gz |  |  |  |
-| 1294_S1_L008_R2_001.fastq.gz |  |  |  |
-| 1294_S1_L008_R3_001.fastq.gz |  |  |  |
-| 1294_S1_L008_R4_001.fastq.gz |  |  |  |
+| 1294_S1_L008_R1_001.fastq.gz | biological read 1 | 101 | Phred+33 |
+| 1294_S1_L008_R2_001.fastq.gz | index | 9 | Phred+33 |
+| 1294_S1_L008_R3_001.fastq.gz | index | 9 | Phred+33 |
+| 1294_S1_L008_R4_001.fastq.gz | biological read 2|  101| Phred+33 |
 
 2. Per-base NT distribution
     1. Use markdown to insert your 4 histograms here.
+    ![alt text](R1_mean_qscore_distribution.png)
+    ![alt text](R2_mean_qscore_distribution.png)
+    ![alt text](R3_mean_qscore_distribution.png)
+    ![alt text](R4_mean_qscore_distribution.png)
     2. **YOUR ANSWER HERE**
-    3. **YOUR ANSWER HERE**
+    3. Number of indeces with N's
+        R2 - 3976613
+        R3 - 3328051
+        total - 7304664
+        ```zcat 1294_S1_L008_R2_001.fastq.gz |sed -n '2~4p'|grep  N | wc -l```
+        ```zcat 1294_S1_L008_R3_001.fastq.gz |sed -n '2~4p'|grep  N | wc -l```
     
 ## Part 2
 1. Define the problem
